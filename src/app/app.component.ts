@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Search } from '../search';
 
 @Component({
   selector: 'app-root',
