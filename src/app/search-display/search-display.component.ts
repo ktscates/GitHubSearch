@@ -18,6 +18,8 @@ export class SearchDisplayComponent implements OnInit {
     const userData = this.route.snapshot.paramMap.get('name');
     this.service.userRequest(userData);
     this.displayUser = this.service.users;
+    // console.log(this.displayUser);
+    console.log(userData)
   }
 
 }

@@ -4,9 +4,10 @@ import { SearchComponent } from './search/search.component';
 import { SearchDisplayComponent } from './search-display/search-display.component';
 
 
-const routes: Routes = [
+const routes: Routes = [  
   { path:'search', component: SearchComponent },
-  { path:'search-display', component: SearchDisplayComponent },
+  { path:'search-display/: name', component: SearchDisplayComponent },
+  
 ];
 
 @NgModule({

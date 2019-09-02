@@ -19,8 +19,9 @@ export class SearchRequestService {
       public_repos:number;
     }
 
-    let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/userss/"+id+"?access_token="+environment.key).toPromise().then(response=>{
+    const promise = new Promise((resolve,reject)=>{
+      this.http.get<ApiResponse>('https://api.github.com/users/' + id + '?access_token=' + environment.key).toPromise().then(response=>{
+        console.log(this.users)
         this.users.login = response.login
         this.users.public_repos = response.public_repos
 
