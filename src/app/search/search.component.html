@@ -1,6 +1,6 @@
 <div class="container">
     <label>Search</label>
-    <input type="text">
-    <button class="btn btn-outline-success" routerLink="/search-display">Search</button>
+    <input type="text" #name>
+    <button class="btn btn-outline-success" (click)="search(name.value)">Search</button>
 
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchRequestService } from '../search-http/search-request.service';
-import { User } from '../user';
-
+import { Router } from '@angular/router';
+ 
 
 @Component({
   selector: 'app-search',
@@ -10,15 +9,19 @@ import { User } from '../user';
 })
 export class SearchComponent implements OnInit {
 
-  user: User;
+  name: string;
+
+  search(users){
+    this.name = users;
+    console.log(this.name);
+    this.router.navigate(['/search-display', this.name]);
+  }
   
 
-  constructor(private searchService:SearchRequestService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.searchService.userRequest("")
-    this.user = this.searchService.user
-
+   
   }
 
 }
