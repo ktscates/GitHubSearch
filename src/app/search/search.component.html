@@ -1,6 +1,6 @@
 <div class="container">
-    <label>Search</label>
-    <input type="text" id="name" #name>
-    <button class="btn btn-outline-success" (click)="search(name.value)">Search</button>
-
+    <h1 class="text-center">GitHub Profile Search</h1>
+    <label>Search GitHub users</label>
+    <input type="text" class="form-control" #userName>
+    <button class="btn btn-outline-success" (click)="goToUrl(userName.value)">Search</button>
 </div>

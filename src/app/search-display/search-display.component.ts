@@ -15,11 +15,11 @@ export class SearchDisplayComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: SearchRequestService) { }
 
   ngOnInit() {
-    const userData = this.route.snapshot.paramMap.get('name');
-    this.service.userRequest(userData);
+    let userName = this.route.snapshot.paramMap.get('userName');
+    this.service.userRequest(userName);
     this.displayUser = this.service.users;
     // console.log(this.displayUser);
-    console.log(userData)
+    // console.log()
   }
 
 }

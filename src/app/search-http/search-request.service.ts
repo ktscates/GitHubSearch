@@ -13,19 +13,19 @@ export class SearchRequestService {
   constructor(private http:HttpClient) { 
     this.users = new User("",0);
   }
-  userRequest(id){
+  userRequest(userName){
     interface ApiResponse{
       login:string;
       public_repos:number;
     }
 
     const promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>('https://api.github.com/users/' + id + '?access_token=' + environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>('https://api.github.com/users/' + userName + '?access_token=' + environment.key).toPromise().then(response=>{
         console.log(this.users)
         this.users.login = response.login
         this.users.public_repos = response.public_repos
 
-        resolve(id);
+        resolve();
       },
       error=>{
         this.users.login = "not found"
