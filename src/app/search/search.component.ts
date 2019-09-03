@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
 
   goToUrl(userName){
     // this.name = users;
-    // console.log(this.name);
+    // console.log(this.userName);
     this.router.navigate(['/search-display', userName]);
   }
   

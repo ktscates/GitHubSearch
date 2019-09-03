@@ -9,6 +9,7 @@ import { User } from '../user';
 export class SearchRequestService {
 
   users: User;
+  key:"e7902aff701fd8081230d54ea4752ff2eb70ca3a";
 
   constructor(private http:HttpClient) { 
     this.users = new User("",0);
@@ -20,7 +21,7 @@ export class SearchRequestService {
     }
 
     const promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>('https://api.github.com/users/' + userName + '?access_token=' + environment.key).toPromise().then(response=>{
+      this.http.get<ApiResponse>('https://api.github.com/users/' + userName + '?access_token=' + this.key).toPromise().then(response=>{
         console.log(this.users)
         this.users.login = response.login
         this.users.public_repos = response.public_repos

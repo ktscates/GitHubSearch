@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  key:"e7902aff701fd8081230d54ea4752ff2eb70ca3a",
 };
 
 /*

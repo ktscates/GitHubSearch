@@ -11,14 +11,16 @@ import { User } from '../user';
 export class SearchDisplayComponent implements OnInit {
 
   displayUser: User;
+  userName: string;
 
   constructor(private route: ActivatedRoute, private service: SearchRequestService) { }
 
   ngOnInit() {
     let userName = this.route.snapshot.paramMap.get('userName');
-    this.service.userRequest(userName);
+    this.service.userRequest(this.userName);
+    console.log(userName);
     this.displayUser = this.service.users;
-    // console.log(this.displayUser);
+    console.log(this.displayUser);
     // console.log()
   }
 
