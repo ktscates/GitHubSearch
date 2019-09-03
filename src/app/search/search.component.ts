@@ -9,11 +9,7 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  // name: string;
-
   goToUrl(userName){
-    // this.name = users;
-    // console.log(this.userName);
     this.router.navigate(['/search-display', userName]);
   }
   
