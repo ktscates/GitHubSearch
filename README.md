@@ -13,7 +13,10 @@ A website where users may enter a GitHub username into a form, submit it, and se
 ## Known Bugs
 The application failed to search the github profile through the API.
 ## Technologies Used
-{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}
+* HTML
+* CSS
+* AngularJs
+* Bootstrap
 ## Support and contact details
 If you run into errors, please feel free to contact me on github.com/ktscates
 ### License
